@@ -8,11 +8,11 @@ declare module 'koishi' {
   }
 }
 
+export const name = 'TeX'
+
 export interface Config {}
 
-export const name = 'tex'
-
-export const schema: Schema<Config> = Schema.object({})
+export const Config: Schema<Config> = Schema.object({})
 
 export function apply(ctx: Context) {
   ctx.with(['puppeteer'], () => {
