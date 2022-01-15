@@ -14,7 +14,7 @@ export interface Config {}
 
 export const Config: Schema<Config> = Schema.object({})
 
-export const using = ['puppeteer']
+export const using = ['puppeteer'] as const
 
 export function apply(ctx: Context) {
   ctx.command('tex <code:rawtext>', 'TeX 渲染', { authority: 2 })
