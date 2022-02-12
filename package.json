@@ -1,7 +1,7 @@
 {
   "name": "koishi-plugin-tex",
   "description": "Rendering tex in Koishi",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "lib/index.js",
   "typings": "lib/index.d.ts",
   "files": [
@@ -26,10 +26,11 @@
     "koishi",
     "plugin",
     "katex",
-    "tex"
+    "tex",
+    "required:puppeteer"
   ],
   "peerDependencies": {
-    "koishi": "^4.0.0",
-    "@koishijs/plugin-puppeteer": "^3.0.0"
+    "koishi": "^4.2.0",
+    "@koishijs/plugin-puppeteer": "^3.0.1"
   }
 }
