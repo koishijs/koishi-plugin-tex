@@ -1,7 +1,7 @@
 {
   "name": "koishi-plugin-tex",
   "description": "Rendering tex in Koishi",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "main": "lib/index.js",
   "typings": "lib/index.d.ts",
   "files": [
@@ -17,6 +17,9 @@
     "url": "https://github.com/koishijs/koishi-plugin-tex/issues"
   },
   "homepage": "https://github.com/koishijs/koishi-plugin-tex",
+  "scripts": {
+    "build": "tsc -b"
+  },
   "keywords": [
     "bot",
     "qqbot",
@@ -27,10 +30,11 @@
     "plugin",
     "katex",
     "tex",
+    "locale:zh",
     "required:puppeteer"
   ],
   "peerDependencies": {
-    "koishi": "^4.2.0",
-    "@koishijs/plugin-puppeteer": "^3.0.1"
+    "koishi": "^4.4.1",
+    "@koishijs/plugin-puppeteer": "^3.0.4"
   }
 }

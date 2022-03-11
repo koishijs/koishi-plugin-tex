@@ -1,0 +1,6 @@
+commands:
+  tex:
+    description: TeX 渲染
+    usage: 渲染器由 https://www.zhihu.com/equation 提供。
+    messages:
+      expect-text: 请输入要渲染的 LaTeX 代码。

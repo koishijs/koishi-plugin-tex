@@ -2,12 +2,6 @@ import { Context, Schema } from 'koishi'
 import {} from '@koishijs/plugin-puppeteer'
 import { escape } from 'querystring'
 
-declare module 'koishi' {
-  interface Modules {
-    tex: typeof import('.')
-  }
-}
-
 export const name = 'TeX'
 
 export interface Config {}
@@ -17,10 +11,11 @@ export const Config: Schema<Config> = Schema.object({})
 export const using = ['puppeteer'] as const
 
 export function apply(ctx: Context) {
-  ctx.command('tex <code:rawtext>', 'TeX 渲染', { authority: 2 })
-    .usage('渲染器由 https://www.zhihu.com/equation 提供。')
-    .action(async (_, tex) => {
-      if (!tex) return '请输入要渲染的 LaTeX 代码。'
+  ctx.i18n.define('zh', require('./locales/zh'))
+
+  ctx.command('tex <code:rawtext>', { authority: 2 })
+    .action(async ({ session }, tex) => {
+      if (!tex) return session.text('.expect-text')
       return ctx.puppeteer.render(null, async (page, next) => {
         await page.goto('https://www.zhihu.com/equation?tex=' + escape(tex))
         const svg = await page.$('svg')
