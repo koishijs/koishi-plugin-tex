@@ -1,5 +1,5 @@
 import { Context, Schema } from 'koishi'
-import {} from '@koishijs/plugin-puppeteer'
+import {} from 'koishi-plugin-puppeteer'
 import { escape } from 'querystring'
 
 export const name = 'TeX'
