@@ -13,7 +13,7 @@ export const using = ['puppeteer'] as const
 export function apply(ctx: Context) {
   ctx.i18n.define('zh', require('./locales/zh'))
 
-  ctx.command('tex <code:rawtext>', { authority: 2 })
+  ctx.command('tex <code:rawtext>')
     .action(async ({ session }, tex) => {
       if (!tex) return session.text('.expect-text')
       return ctx.puppeteer.render(null, async (page, next) => {

@@ -1,7 +1,7 @@
 {
   "name": "koishi-plugin-tex",
   "description": "Rendering Tex in Koishi",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "main": "lib/index.js",
   "typings": "lib/index.d.ts",
   "files": [
@@ -55,9 +55,9 @@
   },
   "devDependencies": {
     "@types/node": "^17.0.45",
-    "atsc": "^1.1.1",
-    "koishi": "^4.8.5",
+    "atsc": "^1.1.2",
+    "koishi": "^4.9.1",
     "koishi-plugin-puppeteer": "^3.0.2",
-    "typescript": "^4.7.4"
+    "typescript": "^4.8.3"
   }
 }
